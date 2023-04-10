@@ -1,10 +1,20 @@
 package dev.pokemon.clean.domain.model;
+import javax.persistence.*;
 
+
+@Entity
+@Table(name = "pokemontable")
 public class PokemonDTOEntity {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@Column
 	private String description;
+	@Column
 	private String type;
+	
+	
 	public Long getId() {
 		return id;
 	}
